@@ -4,6 +4,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const path=require("path");
 const app = express();
+const port = process.env.PORT || 4000;
 const cors = require("cors");
 app.use(cors({
   origin:"*",
@@ -49,6 +50,6 @@ app.use("/api/theatres", theatreRouter);
 app.use("/api/shows", showRouter);
 app.use("/api/bookings", bookingRouter);
 
-app.listen(8082, () => {
-  console.log("Server is up and running on port 8082");
-});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
