@@ -7,7 +7,7 @@ const app = express();
 const cors = require("cors");
 app.use(cors({
   origin:"*",
-  methods:["GET","POST","PUT","DELETE"],
+  methods:["GET","POST","PUT","DELETE","PATCH"],
   allowedHeaders:["Content-Type","Authorization"]
 }));
 const clientBuildPath = path.join(__dirname, "../client/build");
