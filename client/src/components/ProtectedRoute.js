@@ -18,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { Header } = Layout;
+  const { Header, Content, Footer, Sider } = Layout;
 
   useEffect(() => {
     const getValidUser = async () => {
@@ -39,7 +39,7 @@ const ProtectedRoute = ({ children }) => {
     } else {
       navigate("/login");
     }
-  }, [dispatch, navigate]);
+  }, []);
 
   const navItems = [
     { label: "Home", icon: <HomeOutlined /> },
