@@ -6,7 +6,7 @@ export const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  baseURL: "/login",
+  baseURL: "/",
 });
 
 axiosInstance.interceptors.request.use(
